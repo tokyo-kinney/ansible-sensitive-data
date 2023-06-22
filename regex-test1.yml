@@ -5,6 +5,7 @@
          - password_string: 'P@ssword'
   tasks:
          - shell: echo 'Your password is {{ password_string }}'
+           no-log: true
            register: your_password
 
          - debug:
