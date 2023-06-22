@@ -1,0 +1,11 @@
+---
+- name: echo your password
+  hosts: localhost
+  vars:
+         - password_string: 'P@ssword'
+  tasks:
+         - shell: echo 'Your password is {{ password_string }}'
+           register: your_password
+
+         - debug:
+             msg: "{{ your_password }}"
